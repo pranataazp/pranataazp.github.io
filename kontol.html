@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pranata — Full-Stack Developer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="nav">
+  <a href="#top" class="nav-logo">pranata<span class="dot">.</span>dev</a>
+  <button class="nav-toggle" id="navToggle" aria-label="Buka menu">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#about">Tentang</a></li>
+    <li><a href="#skills">Skill</a></li>
+    <li><a href="#projects">Proyek</a></li>
+    <li><a href="#experience">Pengalaman</a></li>
+    <li><a href="#contact" class="nav-cta">Kontak</a></li>
+  </ul>
+</nav>
+
+<header class="hero" id="top">
+  <div class="hero-text">
+    <p class="hero-eyebrow">Halo, perkenalkan</p>
+    <h1>Pranata</h1>
+    <p class="hero-role">Full-Stack Developer Newbie, fokus di web modern & sistem backend yang rapi.</p>
+    <div class="hero-actions">
+      <a href="#projects" class="btn btn-primary">Lihat proyek</a>
+      <a href="assets/cv-pranata.pdf" class="btn btn-ghost">Unduh CV</a>
+    </div>
+  </div>
+  <div class="terminal" aria-hidden="true">
+    <div class="terminal-bar">
+      <span class="dot-red"></span><span class="dot-yellow"></span><span class="dot-green"></span>
+      <span class="terminal-title">whoami.sh</span>
+    </div>
+    <div class="terminal-body">
+      <p><span class="prompt">$</span> whoami</p>
+      <p class="out">pranata</p>
+      <p><span class="prompt">$</span> cat stack.txt</p>
+      <p class="out">JavaScript · Python · Go · React · Node.js</p>
+      <p><span class="prompt">$</span> <span class="cursor" id="typedLine"></span></p>
+    </div>
+  </div>
+</header>
+
+<main>
+
+  <section class="section" id="about">
+    <div class="section-head">
+      <span class="section-tag">01 — Tentang</span>
+      <h2>Sedikit cerita tentang saya</h2>
+    </div>
+    <div class="about-grid">
+      <img src="assets/foto-profil.jpeg" alt="Wujud Asli" class="about-photo">
+      <div class="about-body">
+        <p class="about-text">
+          Saya mahasiswa Ilmu Komputer semester awal yang sudah 2 tahun bergelut dengan pengembangan web
+          dan sistem backend. Saya suka membongkar masalah jadi potongan kecil yang bisa diselesaikan satu per satu,
+          lalu menyusunnya kembali jadi produk yang orang lain benar-benar pakai. Di luar coding, saya aktif
+          berkontribusi ke proyek open-source dan sesekali menulis catatan teknis di blog pribadi.
+        </p>
+        <ul class="about-stats">
+          <li><strong>15+</strong><span>Proyek selesai</span></li>
+          <li><strong>3</strong><span>Tahun pengalaman</span></li>
+          <li><strong>8</strong><span>Kontribusi open-source</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="skills">
+    <div class="section-head">
+      <span class="section-tag">02 — Skill</span>
+      <h2>Tools yang saya pakai sehari-hari</h2>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-group">
+        <h3>Frontend</h3>
+        <div class="skill-bar"><span>React / Next.js</span><i style="--w:90%"></i></div>
+        <div class="skill-bar"><span>JavaScript / TypeScript</span><i style="--w:85%"></i></div>
+        <div class="skill-bar"><span>Tailwind CSS</span><i style="--w:80%"></i></div>
+      </div>
+      <div class="skill-group">
+        <h3>Backend</h3>
+        <div class="skill-bar"><span>Node.js / Express</span><i style="--w:88%"></i></div>
+        <div class="skill-bar"><span>Python / Django</span><i style="--w:75%"></i></div>
+        <div class="skill-bar"><span>PostgreSQL</span><i style="--w:78%"></i></div>
+      </div>
+      <div class="skill-group">
+        <h3>Tools & lainnya</h3>
+        <div class="skill-bar"><span>Git / GitHub</span><i style="--w:92%"></i></div>
+        <div class="skill-bar"><span>Docker</span><i style="--w:65%"></i></div>
+        <div class="skill-bar"><span>Linux</span><i style="--w:82%"></i></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="projects">
+    <div class="section-head">
+      <span class="section-tag">03 — Proyek</span>
+      <h2>Beberapa proyek yang saya bangun</h2>
+    </div>
+    <div class="projects-grid">
+      <article class="project-card featured">
+        <div class="project-info">
+          <h3>TaskFlow</h3>
+          <p>Aplikasi manajemen tugas tim dengan real-time collaboration, dipakai lebih dari 200 pengguna aktif.</p>
+          <ul class="tags">
+            <li>React</li><li>Node.js</li><li>Socket.io</li><li>PostgreSQL</li>
+          </ul>
+          <div class="project-links">
+            <a href="#">Live demo →</a>
+            <a href="#">Source code →</a>
+          </div>
+        </div>
+      </article>
+      <article class="project-card">
+        <div class="project-info">
+          <h3>DevNotes API</h3>
+          <p>REST API untuk aplikasi catatan pribadi developer, lengkap dengan autentikasi JWT dan rate limiting.</p>
+          <ul class="tags">
+            <li>Python</li><li>Django REST</li><li>Docker</li>
+          </ul>
+          <div class="project-links">
+            <a href="#">Source code →</a>
+          </div>
+        </div>
+      </article>
+      <article class="project-card">
+        <div class="project-info">
+          <h3>Portfolio Generator CLI</h3>
+          <p>Tool command-line untuk generate template portofolio statis dari file konfigurasi YAML.</p>
+          <ul class="tags">
+            <li>Go</li><li>CLI</li>
+          </ul>
+          <div class="project-links">
+            <a href="#">Source code →</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="section" id="experience">
+    <div class="section-head">
+      <span class="section-tag">04 — Pengalaman</span>
+      <h2>Perjalanan singkat</h2>
+    </div>
+    <ul class="timeline">
+      <li>
+        <span class="timeline-date">2026 — Sekarang</span>
+        <h3>Software Engineer Intern — Data analyst kotakitarp</h3>
+        <p>Membangun fitur dashboard analitik internal dan mengoptimalkan query database yang memangkas waktu load 40%.</p>
+      </li>
+      <li>
+        <span class="timeline-date">2025</span>
+        <h3>Freelance Web Developer</h3>
+        <p>Mengerjakan 6 proyek website untuk UMKM lokal, dari desain sampai deployment.</p>
+      </li>
+      <li>
+        <span class="timeline-date">2024</span>
+        <h3>Server Develoeper GTA SAMP Kotaku RP</h3>
+        <p>Mengontrol dan menambahkan fitur ke sebuah gamemode LRP/INFERNO.</p>
+      </li>
+    </ul>
+  </section>
+
+  <section class="section contact" id="contact">
+    <div class="section-head">
+      <span class="section-tag">05 — Kontak</span>
+      <h2>Mari terhubung</h2>
+    </div>
+    <p class="contact-text">Terbuka untuk peluang magang, kolaborasi proyek, atau sekadar ngobrol soal teknologi.</p>
+    <div class="contact-links">
+      <a href="mailto:wahyudinataandi@email.com">wahyudinataandi@email.com</a>
+      <a href="https://github.com/pranataazp" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <p>&copy; 2026 Pranata. Dibangun dengan HTML, CSS & JavaScript murni.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
